@@ -154,6 +154,17 @@ body {
     background-size: cover;
 }
 
+/* iOS Safari fix - disable fixed background on mobile */
+@supports (-webkit-touch-callout: none) {
+    .bg-hero,
+    .bg-contact-page,
+    .bg-aboutme,
+    .bg-works-page,
+    .bg-notfound {
+        background-attachment: scroll;
+    }
+}
+
 /* Devicon font size */
 .devicon-lg {
     font-size: 2.5rem;
