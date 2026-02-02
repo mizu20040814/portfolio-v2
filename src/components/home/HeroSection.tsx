@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
     return (
-        <section className="h-screen flex items-center bg-hero -mt-16">
+        <section className="h-screen flex items-center bg-hero -mt-20">
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto text-white">
                     <motion.h2
