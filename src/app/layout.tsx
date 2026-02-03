@@ -1,7 +1,20 @@
 import type { Metadata } from "next";
+import { Lora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+
+// next/font を使用してGoogle Fontsを最適化
+// - 自動的にセルフホスティング（外部リクエスト不要）
+// - display: 'swap' でFOIT/FOUTを最小化
+// - subsets指定でファイルサイズを削減
+const lora = Lora({
+    subsets: ["latin"],
+    display: "swap",
+    variable: "--font-lora",
+    weight: ["400", "500", "600", "700"],
+    style: ["normal", "italic"],
+});
 
 export const metadata: Metadata = {
     title: "PortFolio | Mizuki Tamura",
@@ -55,26 +68,20 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="ja">
+        <html lang="ja" className={lora.variable}>
             <head>
-                {/* Google Fonts - Lora */}
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                {/* Devicon for skill icons - preloadでパフォーマンス最適化 */}
                 <link
-                    rel="preconnect"
-                    href="https://fonts.gstatic.com"
-                    crossOrigin="anonymous"
+                    rel="preload"
+                    href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+                    as="style"
                 />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-                    rel="stylesheet"
-                />
-                {/* Devicon for skill icons */}
                 <link
                     rel="stylesheet"
                     href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
                 />
             </head>
-            <body className="antialiased">
+            <body className={`${lora.className} antialiased`}>
                 <Header />
                 <main className="pt-20">{children}</main>
                 <Footer />

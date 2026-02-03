@@ -1,28 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { skillCategories } from "@/data/skills";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function SkillSection() {
-    const [isVisible, setIsVisible] = useState(false);
-    const sectionRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.2 },
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => observer.disconnect();
-    }, []);
+    const { ref: sectionRef, isVisible } = useIntersectionObserver<HTMLElement>(
+        {
+            threshold: 0.2,
+        },
+    );
 
     return (
         <section
