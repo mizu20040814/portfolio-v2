@@ -1,30 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { works } from "@/data/works";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function WorksSection() {
-    const [isVisible, setIsVisible] = useState(false);
-    const sectionRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.1 },
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => observer.disconnect();
-    }, []);
+    const { ref: sectionRef, isVisible } = useIntersectionObserver<HTMLElement>(
+        {
+            threshold: 0.1,
+        },
+    );
 
     // Only show first 2 works on home page
     const featuredWorks = works.slice(0, 2);
