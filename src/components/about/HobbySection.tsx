@@ -4,11 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 
 const bassImages = [
-    "/images/bass_1.jpg",
-    "/images/bass_2.jpg",
-    "/images/bass_3.jpg",
-    "/images/bass_4.jpg",
-    "/images/bass_5.jpg",
+    "/images/bass_1.webp",
+    "/images/bass_2.webp",
+    "/images/bass_3.webp",
+    "/images/bass_4.webp",
+    "/images/bass_5.webp",
 ];
 
 export default function HobbySection() {

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
             "Contact Mizuki Tamura - Web developer at Doshisha University. Get in touch via email or GitHub.",
         images: [
             {
-                url: "/og-image.png",
+                url: "/images/og-image.webp",
                 width: 1200,
                 height: 630,
                 alt: "Contact Mizuki Tamura",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         title: "Contact | Mizuki Tamura",
         description:
             "Contact Mizuki Tamura - Web developer at Doshisha University. Get in touch via email or GitHub.",
-        images: ["/og-image.png"],
+        images: ["/images/og-image.webp"],
     },
 };
 

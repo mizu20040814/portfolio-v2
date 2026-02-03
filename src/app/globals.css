@@ -114,7 +114,7 @@ body {
 .bg-hero {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("/images/granville_island_L.jpg");
+        url("/images/granville_island_L.webp");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -123,7 +123,7 @@ body {
 .bg-contact-page {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("/images/vancouver_no1.jpg");
+        url("/images/vancouver_no1.webp");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -132,7 +132,7 @@ body {
 .bg-aboutme {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("/images/vancouver_no2.jpg");
+        url("/images/vancouver_no2.webp");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -141,14 +141,14 @@ body {
 .bg-works-page {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("/images/works_coding.jpg");
+        url("/images/works_coding.webp");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
 }
 
 .bg-notfound {
-    background-image: url("/images/notfound.jpg");
+    background-image: url("/images/notfound.webp");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
