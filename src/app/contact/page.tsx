@@ -1,52 +1,36 @@
-"use client";
+import type { Metadata } from "next";
+import ContactContent from "./ContactContent";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
+export const metadata: Metadata = {
+    title: "Contact | Mizuki Tamura",
+    description:
+        "Contact Mizuki Tamura - Web developer at Doshisha University. Get in touch via email or GitHub.",
+    openGraph: {
+        type: "website",
+        locale: "ja_JP",
+        url: "https://portfolio-v2-mizu2s-projects-22f926d0.vercel.app/contact",
+        siteName: "PortFolio | Mizuki Tamura",
+        title: "Contact | Mizuki Tamura",
+        description:
+            "Contact Mizuki Tamura - Web developer at Doshisha University. Get in touch via email or GitHub.",
+        images: [
+            {
+                url: "/og-image.png",
+                width: 1200,
+                height: 630,
+                alt: "Contact Mizuki Tamura",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Contact | Mizuki Tamura",
+        description:
+            "Contact Mizuki Tamura - Web developer at Doshisha University. Get in touch via email or GitHub.",
+        images: ["/og-image.png"],
+    },
+};
 
 export default function ContactPage() {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        setIsVisible(true);
-    }, []);
-
-    return (
-        <section className="min-h-screen flex items-center bg-contact-page -mt-16">
-            <div className="container mx-auto px-4 py-20 text-white">
-                <div className="max-w-3xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl">
-                        <span
-                            className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
-                        >
-                            Contact
-                        </span>
-                    </h2>
-                    <h3 className="pt-6 text-2xl">
-                        <span
-                            className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
-                        >
-                            Name : Mizuki Tamura
-                        </span>
-                    </h3>
-                    <p className="pt-6">
-                        Doshisha University Faculty of Science and Engineering
-                        <br />
-                        Department of Intelligent Information Engineering and
-                        Sciences
-                        <br />
-                        Gmail : mizu20040814@gmail.com
-                    </p>
-                    <hr className="my-6 border-gray-400" />
-                    <Link
-                        href="https://github.com/mizu20040814"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-outline-accent inline-block"
-                    >
-                        Access to GitHub
-                    </Link>
-                </div>
-            </div>
-        </section>
-    );
+    return <ContactContent />;
 }

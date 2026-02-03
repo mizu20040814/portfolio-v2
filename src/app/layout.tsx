@@ -13,6 +13,40 @@ export const metadata: Metadata = {
         "Mizuki Tamura",
         "Doshisha University",
     ],
+    authors: [{ name: "Mizuki Tamura" }],
+    creator: "Mizuki Tamura",
+    openGraph: {
+        type: "website",
+        locale: "ja_JP",
+        url: "https://portfolio-v2-mizu2s-projects-22f926d0.vercel.app/",
+        siteName: "PortFolio | Mizuki Tamura",
+        title: "PortFolio | Mizuki Tamura",
+        description:
+            "Mizuki Tamura's portfolio website - Web developer, Doshisha University",
+        images: [
+            {
+                url: "/og-image.png",
+                width: 1200,
+                height: 630,
+                alt: "Mizuki Tamura Portfolio",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "PortFolio | Mizuki Tamura",
+        description:
+            "Mizuki Tamura's portfolio website - Web developer, Doshisha University",
+        images: ["/og-image.png"],
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+        },
+    },
 };
 
 export default function RootLayout({
@@ -21,7 +55,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="ja">
             <head>
                 {/* Google Fonts - Lora */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
