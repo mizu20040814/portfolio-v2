@@ -25,7 +25,7 @@ export const metadata: Metadata = {
             "Mizuki Tamura's portfolio website - Web developer, Doshisha University",
         images: [
             {
-                url: "/og-image.png",
+                url: "/images/og-image.webp",
                 width: 1200,
                 height: 630,
                 alt: "Mizuki Tamura Portfolio",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         title: "PortFolio | Mizuki Tamura",
         description:
             "Mizuki Tamura's portfolio website - Web developer, Doshisha University",
-        images: ["/og-image.png"],
+        images: ["/images/og-image.webp"],
     },
     robots: {
         index: true,

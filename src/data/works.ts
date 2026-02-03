@@ -13,7 +13,7 @@ export const works: Work[] = [
             { name: "JavaScript", icon: "devicon-javascript-plain colored" },
             { name: "Firebase", icon: "devicon-firebase-plain colored" },
         ],
-        image: "/images/img_for_unishare.jpg",
+        image: "/images/img_for_unishare.webp",
         link: "https://github.com/mizu20040814/UniShare_forGitHub",
     },
     {
@@ -27,7 +27,7 @@ export const works: Work[] = [
             { name: "Bootstrap", icon: "devicon-bootstrap-plain colored" },
             { name: "JavaScript", icon: "devicon-javascript-plain colored" },
         ],
-        image: "/images/img_for_hacku.jpg",
+        image: "/images/img_for_hacku.webp",
         link: "https://hacku.yahoo.co.jp/hacku2025_osaka/",
         award: "Excellence Award at Open Hack U 2025 OSAKA, organized by LINE Yahoo.",
         featured: true,
@@ -44,7 +44,7 @@ export const works: Work[] = [
             { name: "JavaScript", icon: "devicon-javascript-plain colored" },
             { name: "Node.js", icon: "devicon-nodejs-plain colored" },
         ],
-        image: "/images/granville_island_L.jpg",
+        image: "/images/granville_island_L.webp",
         link: "https://github.com/mizu20040814/PortFolio",
         thanks: [
             { label: "Unsplash — Images", url: "https://unsplash.com/ja" },

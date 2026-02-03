@@ -16,7 +16,7 @@ export default function WorkExperienceSection() {
                     {/* Image */}
                     <div className="order-1 lg:order-2 relative h-64 lg:h-96">
                         <Image
-                            src="/images/usj_nintendoworld.jpg"
+                            src="/images/usj_nintendoworld.webp"
                             alt="Super Nintendo World at USJ"
                             fill
                             className="object-cover"
