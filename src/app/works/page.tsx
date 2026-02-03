@@ -15,7 +15,7 @@ export const metadata: Metadata = {
             "Mizuki Tamura's project portfolio - Web applications and development works built with passion and purpose.",
         images: [
             {
-                url: "/og-image.png",
+                url: "/images/og-image.webp",
                 width: 1200,
                 height: 630,
                 alt: "Mizuki Tamura Works",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         title: "Works | Mizuki Tamura",
         description:
             "Mizuki Tamura's project portfolio - Web applications and development works built with passion and purpose.",
-        images: ["/og-image.png"],
+        images: ["/images/og-image.webp"],
     },
 };
 
