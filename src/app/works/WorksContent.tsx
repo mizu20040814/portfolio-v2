@@ -1,18 +1,10 @@
-"use client";
-
-import { useEffect, useState } from "react";
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { works } from "@/data/works";
 import TechIcon from "@/components/ui/TechIcon";
 
 export default function WorksContent() {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        setIsVisible(true);
-    }, []);
-
     return (
         <>
             {/* Hero Section */}
@@ -21,17 +13,17 @@ export default function WorksContent() {
                     <div className="max-w-3xl mx-auto text-white">
                         <h1
                             className="text-4xl md:text-5xl font-normal animate-fade-up"
-                            style={{ animationDelay: "0.3s", opacity: 0 }}
+                            style={{ "--fade-delay": "0.3s" } as CSSProperties}
                         >
                             <span
-                                className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                                className="custom-borderline animate-border"
                             >
                                 Works
                             </span>
                         </h1>
                         <p
                             className="pt-6 text-lg md:text-xl animate-fade-up"
-                            style={{ animationDelay: "0.7s", opacity: 0 }}
+                            style={{ "--fade-delay": "0.7s" } as CSSProperties}
                         >
                             Turning ideas into interactive experiences —
                             <br />

@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Lora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { SITE_URL } from "@/lib/site";
+import ScrollReveal from "@/components/layout/ScrollReveal";
 
 // next/font を使用してGoogle Fontsを最適化
 // - 自動的にセルフホスティング（外部リクエスト不要）
@@ -16,6 +17,11 @@ const lora = Lora({
     weight: ["400", "500", "600", "700"],
     style: ["normal", "italic"],
 });
+
+// ダークモードには対応していないので、ライト配色のみであることを明示する
+export const viewport: Viewport = {
+    colorScheme: "light",
+};
 
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_URL),
@@ -75,6 +81,7 @@ export default function RootLayout({
                 <Header />
                 <main id="main-content" className="pt-20">{children}</main>
                 <Footer />
+                <ScrollReveal />
             </body>
         </html>
     );

@@ -1,19 +1,7 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
-import { skillCategories } from "@/data/skills";
 
 export default function AboutHeroSection() {
-    const [isVisible, setIsVisible] = useState(false);
-    const sectionRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        setIsVisible(true);
-    }, []);
-
     return (
         <section
-            ref={sectionRef}
             className="min-h-svh flex items-center bg-aboutme -mt-20"
             id="aboutme"
         >
@@ -21,14 +9,14 @@ export default function AboutHeroSection() {
                 <div className="max-w-3xl mx-auto text-white">
                     <h1 className="text-4xl md:text-5xl">
                         <span
-                            className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                            className="custom-borderline animate-border"
                         >
                             About Me
                         </span>
                     </h1>
                     <h2 className="pt-6 text-2xl">
                         <span
-                            className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                            className="custom-borderline animate-border"
                         >
                             Mizuki Tamura
                         </span>
