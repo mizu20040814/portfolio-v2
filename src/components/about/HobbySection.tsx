@@ -39,35 +39,58 @@ export default function HobbySection() {
 
                 <div className="grid lg:grid-cols-2 gap-8">
                     {/* Image Carousel */}
-                    <div className="relative h-96">
+                    <div
+                        className="relative h-96"
+                        role="region"
+                        aria-roledescription="carousel"
+                        aria-label="Bass guitar photos"
+                    >
                         <div className="relative w-full h-full overflow-hidden">
                             {bassImages.map((img, index) => (
-                                <Image
+                                <div
                                     key={img}
-                                    src={img}
-                                    alt={`Bass guitar ${index + 1}`}
-                                    fill
-                                    className={`object-cover transition-opacity duration-500 ${
+                                    role="group"
+                                    aria-roledescription="slide"
+                                    aria-label={`${index + 1} / ${bassImages.length}`}
+                                    aria-hidden={index !== currentIndex}
+                                    className={`absolute inset-0 transition-opacity duration-500 ${
                                         index === currentIndex
                                             ? "opacity-100"
                                             : "opacity-0"
                                     }`}
-                                />
+                                >
+                                    <Image
+                                        src={img}
+                                        alt={`Bass guitar ${index + 1}`}
+                                        fill
+                                        fetchPriority={
+                                            index === 0 ? undefined : "low"
+                                        }
+                                        className="object-cover"
+                                    />
+                                </div>
                             ))}
                         </div>
                         {/* Navigation buttons */}
                         <button
+                            type="button"
                             onClick={prevSlide}
+                            aria-label="Previous photo"
                             className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 hover:bg-black/70"
                         >
-                            &#10094;
+                            <span aria-hidden="true">&#10094;</span>
                         </button>
                         <button
+                            type="button"
                             onClick={nextSlide}
+                            aria-label="Next photo"
                             className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 hover:bg-black/70"
                         >
-                            &#10095;
+                            <span aria-hidden="true">&#10095;</span>
                         </button>
+                        <p className="sr-only" aria-live="polite">
+                            {`Photo ${currentIndex + 1} of ${bassImages.length}`}
+                        </p>
                     </div>
 
                     {/* Content */}
@@ -90,6 +113,7 @@ export default function HobbySection() {
                             </span>
                         </h3>
                         <iframe
+                            title="Mizuki's playlist on Spotify"
                             style={{ borderRadius: 0 }}
                             src="https://open.spotify.com/embed/playlist/6xHYVwrJ1BH2GkhxiHqfpJ?utm_source=generator"
                             width="100%"

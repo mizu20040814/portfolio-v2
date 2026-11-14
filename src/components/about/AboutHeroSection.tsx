@@ -19,20 +19,20 @@ export default function AboutHeroSection() {
         >
             <div className="container mx-auto px-4 py-20">
                 <div className="max-w-3xl mx-auto text-white">
-                    <h2 className="text-4xl md:text-5xl">
+                    <h1 className="text-4xl md:text-5xl">
                         <span
                             className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
                         >
                             About Me
                         </span>
-                    </h2>
-                    <h3 className="pt-6 text-2xl">
+                    </h1>
+                    <h2 className="pt-6 text-2xl">
                         <span
                             className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
                         >
                             Mizuki Tamura
                         </span>
-                    </h3>
+                    </h2>
                     <p className="pt-6">
                         Doshisha University Faculty of Science and Engineering
                         <br />
