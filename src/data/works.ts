@@ -44,7 +44,6 @@ export const works: Work[] = [
             { name: "Tailwind CSS", icon: "tailwindcss-plain" },
         ],
         image: "/images/granville_island_L.webp",
-        link: "https://github.com/mizu20040814/portfolio-v2",
         thanks: [
             { label: "Unsplash — Images", url: "https://unsplash.com/ja" },
             {
