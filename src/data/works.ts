@@ -36,16 +36,15 @@ export const works: Work[] = [
         id: "portfolio",
         title: "PortFolio",
         description:
-            "This portfolio website was developed using HTML, CSS, Bootstrap, JavaScript, and Node.js. It is hosted on XServer, and deployed with careful attention to performance and responsive design across various devices.",
+            "This portfolio website is built with Next.js (App Router), React, TypeScript, and Tailwind CSS, and deployed on Vercel. All pages are statically generated, with attention to performance, accessibility, and responsive design across various devices.",
         technologies: [
-            { name: "HTML", icon: "html5-plain" },
-            { name: "CSS", icon: "css3-plain" },
-            { name: "Bootstrap", icon: "bootstrap-plain" },
-            { name: "JavaScript", icon: "javascript-plain" },
-            { name: "Node.js", icon: "nodejs-plain" },
+            { name: "Next.js", icon: "nextjs-plain" },
+            { name: "React", icon: "react-original" },
+            { name: "TypeScript", icon: "typescript-plain" },
+            { name: "Tailwind CSS", icon: "tailwindcss-plain" },
         ],
         image: "/images/granville_island_L.webp",
-        link: "https://github.com/mizu20040814/PortFolio",
+        link: "https://github.com/mizu20040814/portfolio-v2",
         thanks: [
             { label: "Unsplash — Images", url: "https://unsplash.com/ja" },
             {
