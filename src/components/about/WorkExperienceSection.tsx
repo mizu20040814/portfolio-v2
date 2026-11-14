@@ -19,6 +19,7 @@ export default function WorkExperienceSection() {
                             src="/images/usj_nintendoworld.webp"
                             alt="Super Nintendo World at USJ"
                             fill
+                            sizes="(min-width: 1024px) 50vw, 100vw"
                             className="object-cover"
                         />
                     </div>

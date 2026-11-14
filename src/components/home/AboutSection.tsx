@@ -13,7 +13,7 @@ export default function AboutSection() {
     return (
         <section
             ref={sectionRef}
-            className="min-h-screen flex items-center bg-gray-900"
+            className="min-h-svh flex items-center bg-gray-900"
             id="aboutme"
         >
             <div className="container mx-auto px-4 py-20">

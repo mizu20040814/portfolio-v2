@@ -51,6 +51,15 @@ body {
     opacity: 0;
 }
 
+/* Hero text: 以前の framer-motion と同じ動き（1s・ease-out・下から30px）を CSS だけで。
+   既定は表示済みにしておき、動きを減らす設定の人にはアニメーションを付けない。
+   backwards で遅延中だけ開始フレーム（透明）を使い、終了後は本来の表示状態に戻る。 */
+@media (prefers-reduced-motion: no-preference) {
+    .hero-fade-up {
+        animation: fadeUp 1s ease-out backwards;
+    }
+}
+
 /* Custom borderline with animated underline */
 .custom-borderline {
     display: inline-block;

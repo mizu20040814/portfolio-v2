@@ -13,7 +13,7 @@ export default function ContactSection() {
     return (
         <section
             ref={sectionRef}
-            className="min-h-screen flex items-center bg-hero"
+            className="min-h-svh flex items-center bg-hero"
             id="contact"
         >
             <div className="container mx-auto px-4 py-20 text-white">
