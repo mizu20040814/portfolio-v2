@@ -29,7 +29,13 @@ export default function ContactSection() {
                         Department of Intelligent Information Engineering and
                         Sciences
                         <br />
-                        Gmail : mizu20040814@gmail.com
+                        Gmail :{" "}
+                        <a
+                            href="mailto:mizu20040814@gmail.com"
+                            className="hover:underline focus-visible:underline"
+                        >
+                            mizu20040814@gmail.com
+                        </a>
                     </p>
                     <hr className="my-6 border-gray-400" />
                     <Link

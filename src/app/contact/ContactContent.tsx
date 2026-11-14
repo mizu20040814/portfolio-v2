@@ -2,30 +2,36 @@ import Link from "next/link";
 
 export default function ContactContent() {
     return (
-        <section className="min-h-svh flex items-center bg-contact-page -mt-16">
+        <section className="min-h-svh flex items-center bg-contact-page -mt-20">
             <div className="container mx-auto px-4 py-20 text-white">
                 <div className="max-w-3xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl">
+                    <h1 className="text-4xl md:text-5xl">
                         <span
                             className="custom-borderline animate-border"
                         >
                             Contact
                         </span>
-                    </h2>
-                    <h3 className="pt-6 text-2xl">
+                    </h1>
+                    <h2 className="pt-6 text-2xl">
                         <span
                             className="custom-borderline animate-border"
                         >
                             Name : Mizuki Tamura
                         </span>
-                    </h3>
+                    </h2>
                     <p className="pt-6">
                         Doshisha University Faculty of Science and Engineering
                         <br />
                         Department of Intelligent Information Engineering and
                         Sciences
                         <br />
-                        Gmail : mizu20040814@gmail.com
+                        Gmail :{" "}
+                        <a
+                            href="mailto:mizu20040814@gmail.com"
+                            className="hover:underline focus-visible:underline"
+                        >
+                            mizu20040814@gmail.com
+                        </a>
                     </p>
                     <hr className="my-6 border-gray-400" />
                     <Link

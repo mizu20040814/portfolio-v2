@@ -40,10 +40,11 @@ export default function AboutSection() {
                         member has helped me develop strong communication
                         skills, which I consider one of my key strengths.
                     </p>
-                    <Link href="/about">
-                        <button className="btn-outline-accent mt-6">
-                            View More
-                        </button>
+                    <Link
+                        href="/about"
+                        className="btn-outline-accent inline-block mt-6"
+                    >
+                        View More
                     </Link>
                 </div>
             </div>
