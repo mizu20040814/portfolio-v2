@@ -218,8 +218,12 @@ body {
 }
 
 /* Devicon font size */
-.devicon-lg {
-    font-size: 2.5rem;
+.tech-icon {
+    display: inline;
+    width: 2.5rem;
+    height: 2.5rem;
+    /* 以前の devicon フォント（2.5rem、line-height 1）はベースラインから 64/1024em 下まで描かれていたので、行の高さと位置を合わせる */
+    vertical-align: -0.1875rem;
 }
 
 /* Image carousel */

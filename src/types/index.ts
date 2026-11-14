@@ -23,7 +23,7 @@ export interface Work {
 // Skill type definition
 export interface Skill {
     name: string;
-    icon: string; // devicon class name
+    icon: string; // public/icons/ 内の SVG ファイル名（拡張子なし、例: "html5-plain"）
 }
 
 export interface SkillCategory {

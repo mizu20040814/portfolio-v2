@@ -4,30 +4,30 @@ export const skillCategories: SkillCategory[] = [
     {
         title: "Frontend",
         skills: [
-            { name: "HTML", icon: "devicon-html5-plain colored" },
-            { name: "CSS", icon: "devicon-css3-plain colored" },
-            { name: "Bootstrap", icon: "devicon-bootstrap-plain colored" },
-            { name: "JavaScript", icon: "devicon-javascript-plain colored" },
-            { name: "TypeScript", icon: "devicon-typescript-plain colored" },
-            { name: "React", icon: "devicon-react-original colored" },
-            { name: "Flutter", icon: "devicon-flutter-plain colored" },
+            { name: "HTML", icon: "html5-plain" },
+            { name: "CSS", icon: "css3-plain" },
+            { name: "Bootstrap", icon: "bootstrap-plain" },
+            { name: "JavaScript", icon: "javascript-plain" },
+            { name: "TypeScript", icon: "typescript-plain" },
+            { name: "React", icon: "react-original" },
+            { name: "Flutter", icon: "flutter-plain" },
         ],
     },
     {
         title: "Backend",
         skills: [
-            { name: "Node.js", icon: "devicon-nodejs-plain colored" },
-            { name: "Firebase", icon: "devicon-firebase-plain colored" },
-            { name: "Java Servlet", icon: "devicon-java-plain colored" },
+            { name: "Node.js", icon: "nodejs-plain" },
+            { name: "Firebase", icon: "firebase-plain" },
+            { name: "Java Servlet", icon: "java-plain" },
         ],
     },
     {
         title: "Others",
         skills: [
-            { name: "Java", icon: "devicon-java-plain colored" },
-            { name: "Python", icon: "devicon-python-plain colored" },
-            { name: "C", icon: "devicon-c-plain colored" },
-            { name: "C++", icon: "devicon-cplusplus-plain colored" },
+            { name: "Java", icon: "java-plain" },
+            { name: "Python", icon: "python-plain" },
+            { name: "C", icon: "c-plain" },
+            { name: "C++", icon: "cplusplus-plain" },
         ],
     },
     {
@@ -35,12 +35,12 @@ export const skillCategories: SkillCategory[] = [
         skills: [
             {
                 name: "Visual Studio",
-                icon: "devicon-visualstudio-plain colored",
+                icon: "visualstudio-plain",
             },
-            { name: "VSCode", icon: "devicon-vscode-plain colored" },
-            { name: "Git", icon: "devicon-git-plain colored" },
-            { name: "GitHub", icon: "devicon-github-original colored" },
-            { name: "Figma", icon: "devicon-figma-plain colored" },
+            { name: "VSCode", icon: "vscode-plain" },
+            { name: "Git", icon: "git-plain" },
+            { name: "GitHub", icon: "github-original" },
+            { name: "Figma", icon: "figma-plain" },
         ],
     },
 ];

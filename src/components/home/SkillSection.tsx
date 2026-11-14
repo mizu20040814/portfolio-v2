@@ -1,4 +1,5 @@
 import { skillCategories } from "@/data/skills";
+import TechIcon from "@/components/ui/TechIcon";
 
 export default function SkillSection() {
     return (
@@ -34,9 +35,7 @@ export default function SkillSection() {
                                                 key={skill.name}
                                                 className="text-center"
                                             >
-                                                <i
-                                                    className={`${skill.icon} devicon-lg`}
-                                                ></i>
+                                                <TechIcon icon={skill.icon} />
                                                 <div className="mt-1 text-sm">
                                                     {skill.name}
                                                 </div>

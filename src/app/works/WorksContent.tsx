@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { works } from "@/data/works";
+import TechIcon from "@/components/ui/TechIcon";
 
 export default function WorksContent() {
     return (
@@ -113,9 +114,7 @@ export default function WorksContent() {
                                                             key={tech.name}
                                                             className="text-center"
                                                         >
-                                                            <i
-                                                                className={`${tech.icon} devicon-lg`}
-                                                            ></i>
+                                                            <TechIcon icon={tech.icon} />
                                                             <div className="text-sm mt-1">
                                                                 {tech.name}
                                                             </div>
@@ -189,9 +188,7 @@ export default function WorksContent() {
                                                             key={tech.name}
                                                             className="text-center"
                                                         >
-                                                            <i
-                                                                className={`${tech.icon} devicon-lg`}
-                                                            ></i>
+                                                            <TechIcon icon={tech.icon} />
                                                             <div className="text-sm mt-1">
                                                                 {tech.name}
                                                             </div>
