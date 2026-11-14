@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     creator: "Mizuki Tamura",
     openGraph: {
         type: "website",
-        locale: "ja_JP",
+        locale: "en_US",
         url: "https://portfolio-v2-mizu2s-projects-22f926d0.vercel.app/",
         siteName: "PortFolio | Mizuki Tamura",
         title: "PortFolio | Mizuki Tamura",
@@ -70,10 +70,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="ja" className={lora.variable}>
+        <html lang="en" className={lora.variable}>
             <body className={`${lora.className} antialiased`}>
                 <Header />
-                <main className="pt-20">{children}</main>
+                <main id="main-content" className="pt-20">{children}</main>
                 <Footer />
             </body>
         </html>

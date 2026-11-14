@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     alternates: { canonical: "/about" },
     openGraph: {
         type: "website",
-        locale: "ja_JP",
+        locale: "en_US",
         url: "/about",
         siteName: "PortFolio | Mizuki Tamura",
         title: "About Me | Mizuki Tamura",

@@ -34,9 +34,9 @@ export default function SkillSection() {
                                 className="card-sharp shadow-md bg-white"
                             >
                                 <div className="p-6">
-                                    <h5 className="text-lg font-semibold mb-4">
+                                    <h3 className="text-lg font-semibold mb-4">
                                         {category.title}
-                                    </h5>
+                                    </h3>
                                     <hr className="mb-4" />
                                     <div className="flex flex-wrap gap-6">
                                         {category.skills.map((skill) => (

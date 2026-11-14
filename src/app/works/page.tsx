@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     alternates: { canonical: "/works" },
     openGraph: {
         type: "website",
-        locale: "ja_JP",
+        locale: "en_US",
         url: "https://portfolio-v2-mizu2s-projects-22f926d0.vercel.app/works",
         siteName: "PortFolio | Mizuki Tamura",
         title: "Works | Mizuki Tamura",

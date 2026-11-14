@@ -16,10 +16,10 @@ export default function WorksContent() {
     return (
         <>
             {/* Hero Section */}
-            <section className="h-svh flex items-center bg-works-page -mt-16">
+            <section className="h-svh flex items-center bg-works-page -mt-20">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto text-white">
-                        <h2
+                        <h1
                             className="text-4xl md:text-5xl font-normal animate-fade-up"
                             style={{ animationDelay: "0.3s", opacity: 0 }}
                         >
@@ -28,7 +28,7 @@ export default function WorksContent() {
                             >
                                 Works
                             </span>
-                        </h2>
+                        </h1>
                         <p
                             className="pt-6 text-lg md:text-xl animate-fade-up"
                             style={{ animationDelay: "0.7s", opacity: 0 }}
@@ -54,11 +54,11 @@ export default function WorksContent() {
                             {index % 2 === 0 ? (
                                 <>
                                     <div className="text-white">
-                                        <h3 className="text-2xl mb-4">
+                                        <h2 className="text-2xl mb-4">
                                             <span className="custom-borderline animate-border">
                                                 {work.title}
                                             </span>
-                                        </h3>
+                                        </h2>
                                         <p className="mb-4">
                                             {work.description}
                                         </p>
@@ -111,9 +111,9 @@ export default function WorksContent() {
                                         )}
                                         <hr className="my-4 border-gray-600" />
                                         <div className="card-dark-border bg-gray-900 p-4">
-                                            <h5 className="text-lg mb-4">
+                                            <h3 className="text-lg mb-4">
                                                 Technologies Used
-                                            </h5>
+                                            </h3>
                                             <hr className="mb-4 border-gray-600" />
                                             <div className="flex flex-wrap gap-4">
                                                 {work.technologies.map(
@@ -164,11 +164,11 @@ export default function WorksContent() {
                                         />
                                     </div>
                                     <div className="order-1 lg:order-2 text-white">
-                                        <h3 className="text-2xl mb-4">
+                                        <h2 className="text-2xl mb-4">
                                             <span className="custom-borderline animate-border">
                                                 {work.title}
                                             </span>
-                                        </h3>
+                                        </h2>
                                         <p className="mb-4">
                                             {work.description}
                                         </p>
@@ -185,9 +185,9 @@ export default function WorksContent() {
                                         )}
                                         <hr className="my-4 border-gray-600" />
                                         <div className="card-dark-border bg-gray-900 p-4">
-                                            <h5 className="text-lg mb-4">
+                                            <h3 className="text-lg mb-4">
                                                 Technologies Used
-                                            </h5>
+                                            </h3>
                                             <hr className="mb-4 border-gray-600" />
                                             <div className="flex flex-wrap gap-4">
                                                 {work.technologies.map(
