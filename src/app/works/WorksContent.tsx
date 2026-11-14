@@ -16,7 +16,7 @@ export default function WorksContent() {
     return (
         <>
             {/* Hero Section */}
-            <section className="h-screen flex items-center bg-works-page -mt-16">
+            <section className="h-svh flex items-center bg-works-page -mt-16">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto text-white">
                         <h2
@@ -147,6 +147,7 @@ export default function WorksContent() {
                                             src={work.image}
                                             alt={work.title}
                                             fill
+                                            sizes="(min-width: 1024px) 50vw, 100vw"
                                             className="object-cover"
                                         />
                                     </div>
@@ -158,6 +159,7 @@ export default function WorksContent() {
                                             src={work.image}
                                             alt={work.title}
                                             fill
+                                            sizes="(min-width: 1024px) 50vw, 100vw"
                                             className="object-cover"
                                         />
                                     </div>

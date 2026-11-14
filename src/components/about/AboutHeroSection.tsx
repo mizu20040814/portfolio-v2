@@ -14,7 +14,7 @@ export default function AboutHeroSection() {
     return (
         <section
             ref={sectionRef}
-            className="min-h-screen flex items-center bg-aboutme -mt-20"
+            className="min-h-svh flex items-center bg-aboutme -mt-20"
             id="aboutme"
         >
             <div className="container mx-auto px-4 py-20">

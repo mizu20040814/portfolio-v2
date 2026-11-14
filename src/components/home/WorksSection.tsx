@@ -76,6 +76,7 @@ export default function WorksSection() {
                             src={featuredWorks[0].image}
                             alt={featuredWorks[0].title}
                             fill
+                            sizes="(min-width: 1024px) 50vw, 100vw"
                             className="object-cover"
                         />
                     </div>
@@ -88,6 +89,7 @@ export default function WorksSection() {
                             src={featuredWorks[1].image}
                             alt={featuredWorks[1].title}
                             fill
+                            sizes="(min-width: 1024px) 50vw, 100vw"
                             className="object-cover"
                         />
                     </div>

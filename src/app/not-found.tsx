@@ -11,7 +11,7 @@ export default function NotFound() {
     }, []);
 
     return (
-        <section className="min-h-screen flex items-center bg-notfound -mt-20">
+        <section className="min-h-svh flex items-center bg-notfound -mt-20">
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto text-white">
                     <h1 className="text-5xl md:text-6xl font-normal mb-6">
