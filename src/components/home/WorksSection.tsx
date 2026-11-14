@@ -1,23 +1,14 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { works } from "@/data/works";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function WorksSection() {
-    const { ref: sectionRef, isVisible } = useIntersectionObserver<HTMLElement>(
-        {
-            threshold: 0.1,
-        },
-    );
-
     // Only show first 2 works on home page
     const featuredWorks = works.slice(0, 2);
 
     return (
         <section
-            ref={sectionRef}
+            data-reveal="0.1"
             className="flex items-center bg-gray-900"
             id="works"
         >
@@ -25,7 +16,7 @@ export default function WorksSection() {
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl text-white">
                         <span
-                            className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                            className="custom-borderline"
                         >
                             Works
                         </span>
@@ -37,7 +28,7 @@ export default function WorksSection() {
                     <div className="text-white">
                         <h3 className="text-2xl mb-4">
                             <span
-                                className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                                className="custom-borderline"
                             >
                                 {featuredWorks[0].title}
                             </span>
@@ -97,7 +88,7 @@ export default function WorksSection() {
                     <div className="order-1 lg:order-2 text-white">
                         <h3 className="text-2xl mb-4">
                             <span
-                                className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                                className="custom-borderline"
                             >
                                 {featuredWorks[1].title}
                             </span>

@@ -53,7 +53,7 @@ export default function HobbySection() {
                                     aria-roledescription="slide"
                                     aria-label={`${index + 1} / ${bassImages.length}`}
                                     aria-hidden={index !== currentIndex}
-                                    className={`absolute inset-0 transition-opacity duration-500 ${
+                                    className={`absolute inset-0 transition-opacity duration-500 motion-reduce:transition-none ${
                                         index === currentIndex
                                             ? "opacity-100"
                                             : "opacity-0"

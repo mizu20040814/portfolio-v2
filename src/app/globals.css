@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+    color-scheme: light;
     --background: #ffffff;
     --foreground: #171717;
     --accent: #d9232d;
@@ -34,21 +35,22 @@ body {
 
 @keyframes borderReveal {
     from {
-        width: 0;
+        transform: scaleX(0);
     }
     to {
-        width: 100%;
+        transform: scaleX(1);
     }
 }
 
-.animate-fade-up {
-    animation: fadeUp 1s ease-out forwards;
-}
-
-.animate-fade-up-delay {
-    animation: fadeUp 1s ease-out forwards;
-    animation-delay: 0.4s;
-    opacity: 0;
+/*
+ * 動きは「視差効果を減らす」を設定していない人にだけ付ける。
+ * 既定（設定している人）は最終状態のまま表示する。
+ * backwards で遅延中だけ開始フレームを使い、終了後は本来のスタイル（表示状態）に戻る。
+ */
+@media (prefers-reduced-motion: no-preference) {
+    .animate-fade-up {
+        animation: fadeUp 1s ease-out var(--fade-delay, 0s) backwards;
+    }
 }
 
 /* Hero text: 以前の framer-motion と同じ動き（1s・ease-out・下から30px）を CSS だけで。
@@ -72,13 +74,30 @@ body {
     bottom: -2px;
     left: 0;
     height: 1px;
-    width: 0;
+    width: 100%;
     background-color: var(--accent);
-    transition: none;
+    transform-origin: left;
 }
 
-.custom-borderline.animate-border::after {
-    animation: borderReveal 1s ease-out forwards;
+@media (prefers-reduced-motion: no-preference) {
+    /* ページを開いた直後に引く下線 */
+    .custom-borderline.animate-border::after {
+        animation: borderReveal 1s ease-out backwards;
+    }
+
+    /*
+     * スクロールで画面に入ったときに引く下線（ScrollReveal が is-visible を付ける）。
+     * JS が動かない環境では下線を最初から表示する。
+     */
+    @media (scripting: enabled) {
+        [data-reveal] .custom-borderline::after {
+            transform: scaleX(0);
+        }
+
+        [data-reveal].is-visible .custom-borderline::after {
+            animation: borderReveal 1s ease-out forwards;
+        }
+    }
 }
 
 /* Navigation link hover effect */

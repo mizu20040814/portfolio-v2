@@ -1,18 +1,9 @@
-"use client";
-
 import Link from "next/link";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function AboutSection() {
-    const { ref: sectionRef, isVisible } = useIntersectionObserver<HTMLElement>(
-        {
-            threshold: 0.3,
-        },
-    );
-
     return (
         <section
-            ref={sectionRef}
+            data-reveal="0.3"
             className="min-h-svh flex items-center bg-gray-900"
             id="aboutme"
         >
@@ -20,14 +11,14 @@ export default function AboutSection() {
                 <div className="max-w-3xl mx-auto text-white">
                     <h2 className="text-3xl md:text-4xl">
                         <span
-                            className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                            className="custom-borderline"
                         >
                             About Me
                         </span>
                     </h2>
                     <h3 className="pt-6 text-2xl">
                         <span
-                            className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                            className="custom-borderline"
                         >
                             Mizuki Tamura
                         </span>
