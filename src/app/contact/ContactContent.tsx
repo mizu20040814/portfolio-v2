@@ -1,29 +1,20 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function ContactContent() {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        setIsVisible(true);
-    }, []);
-
     return (
         <section className="min-h-screen flex items-center bg-contact-page -mt-16">
             <div className="container mx-auto px-4 py-20 text-white">
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-4xl md:text-5xl">
                         <span
-                            className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                            className="custom-borderline animate-border"
                         >
                             Contact
                         </span>
                     </h2>
                     <h3 className="pt-6 text-2xl">
                         <span
-                            className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                            className="custom-borderline animate-border"
                         >
                             Name : Mizuki Tamura
                         </span>

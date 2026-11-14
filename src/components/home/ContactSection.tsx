@@ -1,18 +1,9 @@
-"use client";
-
 import Link from "next/link";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function ContactSection() {
-    const { ref: sectionRef, isVisible } = useIntersectionObserver<HTMLElement>(
-        {
-            threshold: 0.3,
-        },
-    );
-
     return (
         <section
-            ref={sectionRef}
+            data-reveal="0.3"
             className="min-h-screen flex items-center bg-hero"
             id="contact"
         >
@@ -20,14 +11,14 @@ export default function ContactSection() {
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-3xl md:text-4xl">
                         <span
-                            className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                            className="custom-borderline"
                         >
                             Contact
                         </span>
                     </h2>
                     <h3 className="pt-6 text-2xl">
                         <span
-                            className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                            className="custom-borderline"
                         >
                             Name : Mizuki Tamura
                         </span>

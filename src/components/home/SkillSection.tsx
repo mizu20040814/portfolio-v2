@@ -1,18 +1,9 @@
-"use client";
-
 import { skillCategories } from "@/data/skills";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 export default function SkillSection() {
-    const { ref: sectionRef, isVisible } = useIntersectionObserver<HTMLElement>(
-        {
-            threshold: 0.2,
-        },
-    );
-
     return (
         <section
-            ref={sectionRef}
+            data-reveal="0.2"
             className="flex items-center bg-white"
             id="skills"
         >
@@ -20,7 +11,7 @@ export default function SkillSection() {
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-3xl md:text-4xl mb-8">
                         <span
-                            className={`custom-borderline ${isVisible ? "animate-border" : ""}`}
+                            className="custom-borderline"
                         >
                             Skills
                         </span>

@@ -47,7 +47,7 @@ export default function HobbySection() {
                                     src={img}
                                     alt={`Bass guitar ${index + 1}`}
                                     fill
-                                    className={`object-cover transition-opacity duration-500 ${
+                                    className={`object-cover transition-opacity duration-500 motion-reduce:transition-none ${
                                         index === currentIndex
                                             ? "opacity-100"
                                             : "opacity-0"
