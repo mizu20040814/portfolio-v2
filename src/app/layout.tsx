@@ -3,6 +3,7 @@ import { Lora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { SITE_URL } from "@/lib/site";
 
 // next/font を使用してGoogle Fontsを最適化
 // - 自動的にセルフホスティング（外部リクエスト不要）
@@ -17,6 +18,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL(SITE_URL),
     title: "PortFolio | Mizuki Tamura",
     description:
         "Mizuki Tamura's portfolio website - Web developer, Doshisha University",
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
             "Mizuki Tamura's portfolio website - Web developer, Doshisha University",
         images: [
             {
-                url: "/images/og-image.webp",
+                url: "/images/og-image.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Mizuki Tamura Portfolio",
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
         title: "PortFolio | Mizuki Tamura",
         description:
             "Mizuki Tamura's portfolio website - Web developer, Doshisha University",
-        images: ["/images/og-image.webp"],
+        images: ["/images/og-image.jpg"],
     },
     robots: {
         index: true,
@@ -69,18 +71,6 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja" className={lora.variable}>
-            <head>
-                {/* Devicon for skill icons - preloadでパフォーマンス最適化 */}
-                <link
-                    rel="preload"
-                    href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-                    as="style"
-                />
-                <link
-                    rel="stylesheet"
-                    href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-                />
-            </head>
             <body className={`${lora.className} antialiased`}>
                 <Header />
                 <main className="pt-20">{children}</main>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { works } from "@/data/works";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import TechIcon from "@/components/ui/TechIcon";
 
 export default function WorksSection() {
     const { ref: sectionRef, isVisible } = useIntersectionObserver<HTMLElement>(
@@ -53,9 +54,7 @@ export default function WorksSection() {
                                         key={tech.name}
                                         className="text-center"
                                     >
-                                        <i
-                                            className={`${tech.icon} devicon-lg`}
-                                        ></i>
+                                        <TechIcon icon={tech.icon} />
                                         <div className="text-sm mt-1">
                                             {tech.name}
                                         </div>
@@ -122,9 +121,7 @@ export default function WorksSection() {
                                         key={tech.name}
                                         className="text-center"
                                     >
-                                        <i
-                                            className={`${tech.icon} devicon-lg`}
-                                        ></i>
+                                        <TechIcon icon={tech.icon} />
                                         <div className="text-sm mt-1">
                                             {tech.name}
                                         </div>

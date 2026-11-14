@@ -5,6 +5,7 @@ export const metadata: Metadata = {
     title: "Contact | Mizuki Tamura",
     description:
         "Contact Mizuki Tamura - Web developer at Doshisha University. Get in touch via email or GitHub.",
+    alternates: { canonical: "/contact" },
     openGraph: {
         type: "website",
         locale: "ja_JP",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
             "Contact Mizuki Tamura - Web developer at Doshisha University. Get in touch via email or GitHub.",
         images: [
             {
-                url: "/images/og-image.webp",
+                url: "/images/og-image.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Contact Mizuki Tamura",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
         title: "Contact | Mizuki Tamura",
         description:
             "Contact Mizuki Tamura - Web developer at Doshisha University. Get in touch via email or GitHub.",
-        images: ["/images/og-image.webp"],
+        images: ["/images/og-image.jpg"],
     },
 };
 

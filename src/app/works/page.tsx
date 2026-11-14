@@ -5,6 +5,7 @@ export const metadata: Metadata = {
     title: "Works | Mizuki Tamura",
     description:
         "Mizuki Tamura's project portfolio - Web applications and development works built with passion and purpose.",
+    alternates: { canonical: "/works" },
     openGraph: {
         type: "website",
         locale: "ja_JP",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
             "Mizuki Tamura's project portfolio - Web applications and development works built with passion and purpose.",
         images: [
             {
-                url: "/images/og-image.webp",
+                url: "/images/og-image.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Mizuki Tamura Works",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
         title: "Works | Mizuki Tamura",
         description:
             "Mizuki Tamura's project portfolio - Web applications and development works built with passion and purpose.",
-        images: ["/images/og-image.webp"],
+        images: ["/images/og-image.jpg"],
     },
 };
 
