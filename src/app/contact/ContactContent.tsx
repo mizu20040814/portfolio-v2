@@ -11,7 +11,7 @@ export default function ContactContent() {
     }, []);
 
     return (
-        <section className="min-h-screen flex items-center bg-contact-page -mt-16">
+        <section className="min-h-svh flex items-center bg-contact-page -mt-16">
             <div className="container mx-auto px-4 py-20 text-white">
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-4xl md:text-5xl">
