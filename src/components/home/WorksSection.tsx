@@ -45,7 +45,7 @@ export default function WorksSection() {
                         <p className="mb-4">{featuredWorks[0].description}</p>
                         <hr className="my-4 border-gray-600" />
                         <div className="card-dark-border bg-gray-900 p-4">
-                            <h5 className="text-lg mb-4">Technologies Used</h5>
+                            <h4 className="text-lg mb-4">Technologies Used</h4>
                             <hr className="mb-4 border-gray-600" />
                             <div className="flex flex-wrap gap-4">
                                 {featuredWorks[0].technologies.map((tech) => (
@@ -116,7 +116,7 @@ export default function WorksSection() {
                         )}
                         <hr className="my-4 border-gray-600" />
                         <div className="card-dark-border bg-gray-900 p-4">
-                            <h5 className="text-lg mb-4">Technologies Used</h5>
+                            <h4 className="text-lg mb-4">Technologies Used</h4>
                             <hr className="mb-4 border-gray-600" />
                             <div className="flex flex-wrap gap-4">
                                 {featuredWorks[1].technologies.map((tech) => (
