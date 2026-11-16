@@ -17,7 +17,7 @@ export const profile: Profile = {
     currentCity: "Kyoto",
     email: "mizu20040814@gmail.com",
     github: "https://github.com/mizu20040814",
-    bio: "I am currently learning web application development, mainly using JavaScript and Firebase through personal projects. I am also familiar with HTML, CSS, Node.js, and Bootstrap. My experience working as a USJ crew member has helped me develop strong communication skills, which I consider one of my key strengths.",
+    bio: "I am a fourth-year student at Doshisha University who builds web applications with React, Next.js, and TypeScript, along with backends in Go and Supabase. I have shipped products at a hackathon, at a company job program, and in a university project where I developed an app on my own. My experience as an English-speaking crew member at USJ has helped me develop strong communication skills, which I consider one of my key strengths.",
 };
 
 // 誕生日から満年齢を計算する

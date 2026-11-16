@@ -61,7 +61,7 @@ export const works: Work[] = [
             { name: "React", icon: "react-original" },
             { name: "Go", icon: "go-plain" },
         ],
-        // TODO: スクリーンショットが届いたら差し替える（今は Works ページの背景画像を仮で使用）
+        // スクリーンショットがないので Works ページの背景画像を使う
         image: "/images/works_coding.webp",
         period: "Aug 2025 (1 week)",
         team: "Team of 5",
