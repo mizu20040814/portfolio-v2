@@ -38,6 +38,36 @@ export const works: Work[] = [
         featured: true,
     },
     {
+        id: "ryoshin-reki",
+        title: "Ryoshin-reki & Doshisha Student Media",
+        description:
+            "A daily calendar app for the 150th anniversary of Doshisha, developed with Doshisha University, Doshisha Kori High School, and manamu Inc. as part of the ROHM Memorial Project. I built the whole app by myself, along with a student web media site that delivers the app's updates: news, columns, interviews with professors, and stories about campus life from a student's perspective.",
+        technologies: [
+            { name: "Next.js", icon: "nextjs-plain" },
+            { name: "Supabase", icon: "supabase-original" },
+        ],
+        image: "/images/img_for_doshisha_media.webp",
+        link: "https://doshisha-media-app.vercel.app/",
+        period: "Apr 2025 – Mar 2026 (released Nov 2025)",
+        team: "Project team of 5",
+        role: "All development (app and web media)",
+    },
+    {
+        id: "rakuten-shareable",
+        title: "Rakuten Shareable",
+        description:
+            "Built at Rakuten Group's summer job program. A platform that uses AI to suggest the supplies each person needs in a disaster, and lets users share and exchange the supplies they need or can give away with people nearby.",
+        technologies: [
+            { name: "React", icon: "react-original" },
+            { name: "Go", icon: "go-plain" },
+        ],
+        // TODO: スクリーンショットが届いたら差し替える（今は Works ページの背景画像を仮で使用）
+        image: "/images/works_coding.webp",
+        period: "Aug 2025 (1 week)",
+        team: "Team of 5",
+        role: "Frontend (requirements, UI and API design were done together)",
+    },
+    {
         id: "portfolio",
         title: "PortFolio",
         description:
