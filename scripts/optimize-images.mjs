@@ -1,7 +1,9 @@
-const sharp = require("sharp");
-const fs = require("fs");
-const path = require("path");
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import sharp from "sharp";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const IMAGES_DIR = path.join(__dirname, "..", "public", "images");
 const QUALITY = 80;
 
