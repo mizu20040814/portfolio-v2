@@ -39,10 +39,10 @@ export default function AboutPage() {
     return (
         <>
             <AboutHeroSection />
+            <TimelineSection />
             <SkillSection />
             <HobbySection />
             <WorkExperienceSection />
-            <TimelineSection />
         </>
     );
 }

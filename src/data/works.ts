@@ -47,6 +47,7 @@ export const works: Work[] = [
             { name: "Supabase", icon: "supabase-original" },
         ],
         image: "/images/img_for_doshisha_media.webp",
+        imagePosition: "left top",
         link: "https://doshisha-media-app.vercel.app/",
         period: "Apr 2025 – Mar 2026 (released Nov 2025)",
         team: "Project team of 5",

@@ -114,6 +114,7 @@ export default async function WorkDetailPage({ params }: Props) {
                         preload
                         sizes="(min-width: 1536px) 1504px, (min-width: 1280px) 1248px, 100vw"
                         className="object-cover"
+                                        style={{ objectPosition: work.imagePosition }}
                     />
                 </div>
 

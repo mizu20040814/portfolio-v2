@@ -41,6 +41,7 @@ export interface Work {
     description: string;
     technologies: Technology[];
     image: string;
+    imagePosition?: string; // object-position（例: "left top"）。省略時は中央
     link?: string;
     award?: Award;
     featured?: boolean; // Home の Works に載せる
