@@ -15,6 +15,7 @@ export const works: Work[] = [
         ],
         image: "/images/img_for_unishare.webp",
         link: "https://github.com/mizu20040814/UniShare_forGitHub",
+        featured: true,
     },
     {
         id: "tabit",
@@ -29,7 +30,11 @@ export const works: Work[] = [
         ],
         image: "/images/img_for_hacku.webp",
         link: "https://hacku.yahoo.co.jp/hacku2025_osaka/",
-        award: "Excellence Award at Open Hack U 2025 OSAKA, organized by LINE Yahoo.",
+        award: {
+            title: "Excellence Award",
+            event: "Open Hack U 2025 OSAKA",
+            organizer: "LINE Yahoo",
+        },
         featured: true,
     },
     {

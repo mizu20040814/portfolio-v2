@@ -5,6 +5,7 @@ import SkillSection from "@/components/home/SkillSection";
 import WorksSection from "@/components/home/WorksSection";
 import ContactSection from "@/components/home/ContactSection";
 import { SITE_URL } from "@/lib/site";
+import { profile } from "@/data/profile";
 
 export const metadata: Metadata = {
     alternates: { canonical: "/" },
@@ -14,14 +15,14 @@ export const metadata: Metadata = {
 const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Mizuki Tamura",
+    name: profile.name,
     url: SITE_URL,
     jobTitle: "Web Developer",
     affiliation: {
         "@type": "CollegeOrUniversity",
-        name: "Doshisha University",
+        name: profile.university,
     },
-    sameAs: ["https://github.com/mizu20040814"],
+    sameAs: [profile.github],
 };
 
 export default function Home() {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { profile } from "@/data/profile";
 
 export default function ContactContent() {
     return (
@@ -16,26 +17,25 @@ export default function ContactContent() {
                         <span
                             className="custom-borderline animate-border"
                         >
-                            Name : Mizuki Tamura
+                            Name : {profile.name}
                         </span>
                     </h2>
                     <p className="pt-6">
-                        Doshisha University Faculty of Science and Engineering
+                        {profile.university} {profile.faculty}
                         <br />
-                        Department of Intelligent Information Engineering and
-                        Sciences
+                        {profile.department}
                         <br />
                         Gmail :{" "}
                         <a
-                            href="mailto:mizu20040814@gmail.com"
+                            href={`mailto:${profile.email}`}
                             className="hover:underline focus-visible:underline"
                         >
-                            mizu20040814@gmail.com
+                            {profile.email}
                         </a>
                     </p>
                     <hr className="my-6 border-gray-400" />
                     <Link
-                        href="https://github.com/mizu20040814"
+                        href={profile.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-outline-accent inline-block"

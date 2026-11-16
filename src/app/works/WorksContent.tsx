@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { works } from "@/data/works";
 import TechIcon from "@/components/ui/TechIcon";
+import AwardText from "@/components/ui/AwardText";
 
 export default function WorksContent() {
     return (
@@ -90,17 +91,7 @@ export default function WorksContent() {
                                             </>
                                         )}
 
-                                        {work.award && (
-                                            <p className="font-bold mb-4">
-                                                Received the{" "}
-                                                <span className="text-accent">
-                                                    Excellence Award
-                                                </span>{" "}
-                                                at Open Hack U 2025 OSAKA,
-                                                <br />
-                                                organized by LINE Yahoo.
-                                            </p>
-                                        )}
+                                        {work.award && <AwardText award={work.award} />}
                                         <hr className="my-4 border-gray-600" />
                                         <div className="card-dark-border bg-gray-900 p-4">
                                             <h3 className="text-lg mb-4">
@@ -164,17 +155,7 @@ export default function WorksContent() {
                                         <p className="mb-4">
                                             {work.description}
                                         </p>
-                                        {work.award && (
-                                            <p className="font-bold mb-4">
-                                                Received the{" "}
-                                                <span className="text-accent">
-                                                    Excellence Award
-                                                </span>{" "}
-                                                at Open Hack U 2025 OSAKA,
-                                                <br />
-                                                organized by LINE Yahoo.
-                                            </p>
-                                        )}
+                                        {work.award && <AwardText award={work.award} />}
                                         <hr className="my-4 border-gray-600" />
                                         <div className="card-dark-border bg-gray-900 p-4">
                                             <h3 className="text-lg mb-4">

@@ -4,6 +4,27 @@ export interface Technology {
     icon: string;
 }
 
+// Award shown on a work
+export interface Award {
+    title: string;
+    event: string;
+    organizer: string;
+}
+
+// Profile text shared across pages
+export interface Profile {
+    name: string;
+    university: string;
+    faculty: string;
+    department: string;
+    birthDate: string; // YYYY-MM-DD
+    hometown: string;
+    currentCity: string;
+    email: string;
+    github: string;
+    bio: string;
+}
+
 // Work project type definition
 export interface Work {
     id: string;
@@ -12,8 +33,8 @@ export interface Work {
     technologies: Technology[];
     image: string;
     link?: string;
-    award?: string;
-    featured?: boolean;
+    award?: Award;
+    featured?: boolean; // Home の Works に載せる
     thanks?: {
         label: string;
         url: string;

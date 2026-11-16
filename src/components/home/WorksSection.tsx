@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { works } from "@/data/works";
 import TechIcon from "@/components/ui/TechIcon";
+import AwardText from "@/components/ui/AwardText";
 
 export default function WorksSection() {
-    // Only show first 2 works on home page
-    const featuredWorks = works.slice(0, 2);
+    // works.ts で featured: true の作品だけを Home に載せる
+    const featuredWorks = works.filter((work) => work.featured);
 
     return (
         <section
@@ -24,114 +25,85 @@ export default function WorksSection() {
                     </h2>
                 </div>
 
-                {/* UniShare */}
-                <div className="grid lg:grid-cols-2 gap-8 mb-16">
-                    <div className="text-white">
-                        <h3 className="text-2xl mb-4">
-                            <span
-                                className="custom-borderline"
-                            >
-                                {featuredWorks[0].title}
-                            </span>
-                        </h3>
-                        <p className="mb-4">{featuredWorks[0].description}</p>
-                        <hr className="my-4 border-gray-600" />
-                        <div className="card-dark-border bg-gray-900 p-4">
-                            <h4 className="text-lg mb-4">Technologies Used</h4>
-                            <hr className="mb-4 border-gray-600" />
-                            <div className="flex flex-wrap gap-4">
-                                {featuredWorks[0].technologies.map((tech) => (
-                                    <div
-                                        key={tech.name}
-                                        className="text-center"
-                                    >
-                                        <TechIcon icon={tech.icon} />
-                                        <div className="text-sm mt-1">
-                                            {tech.name}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <Link
-                            href={featuredWorks[0].link || "#"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-outline-accent inline-block mt-6"
+                {featuredWorks.map((work, index) => {
+                    // 偶数番目は文章が左、奇数番目は画像が左（モバイルでは常に文章が上）
+                    const imageFirst = index % 2 === 1;
+                    const isLast = index === featuredWorks.length - 1;
+                    return (
+                        <div
+                            key={work.id}
+                            className={`grid lg:grid-cols-2 gap-8${isLast ? "" : " mb-16"}`}
                         >
-                            View More
-                        </Link>
-                    </div>
-                    <div className="relative h-64 lg:h-auto">
-                        <Image
-                            src={featuredWorks[0].image}
-                            alt={featuredWorks[0].title}
-                            fill
-                            sizes="(min-width: 1024px) 50vw, 100vw"
-                            className="object-cover"
-                        />
-                    </div>
-                </div>
-
-                {/* Tabit */}
-                <div className="grid lg:grid-cols-2 gap-8">
-                    <div className="order-2 lg:order-1 relative h-64 lg:h-auto">
-                        <Image
-                            src={featuredWorks[1].image}
-                            alt={featuredWorks[1].title}
-                            fill
-                            sizes="(min-width: 1024px) 50vw, 100vw"
-                            className="object-cover"
-                        />
-                    </div>
-                    <div className="order-1 lg:order-2 text-white">
-                        <h3 className="text-2xl mb-4">
-                            <span
-                                className="custom-borderline"
+                            {imageFirst && (
+                                <div className="order-2 lg:order-1 relative h-64 lg:h-auto">
+                                    <Image
+                                        src={work.image}
+                                        alt={work.title}
+                                        fill
+                                        sizes="(min-width: 1024px) 50vw, 100vw"
+                                        className="object-cover"
+                                    />
+                                </div>
+                            )}
+                            <div
+                                className={
+                                    imageFirst
+                                        ? "order-1 lg:order-2 text-white"
+                                        : "text-white"
+                                }
                             >
-                                {featuredWorks[1].title}
-                            </span>
-                        </h3>
-                        <p className="mb-4">{featuredWorks[1].description}</p>
-                        {featuredWorks[1].award && (
-                            <p className="font-bold mb-4">
-                                Received the{" "}
-                                <span className="text-accent">
-                                    Excellence Award
-                                </span>{" "}
-                                at Open Hack U 2025 OSAKA,
-                                <br />
-                                organized by LINE Yahoo.
-                            </p>
-                        )}
-                        <hr className="my-4 border-gray-600" />
-                        <div className="card-dark-border bg-gray-900 p-4">
-                            <h4 className="text-lg mb-4">Technologies Used</h4>
-                            <hr className="mb-4 border-gray-600" />
-                            <div className="flex flex-wrap gap-4">
-                                {featuredWorks[1].technologies.map((tech) => (
-                                    <div
-                                        key={tech.name}
-                                        className="text-center"
-                                    >
-                                        <TechIcon icon={tech.icon} />
-                                        <div className="text-sm mt-1">
-                                            {tech.name}
-                                        </div>
+                                <h3 className="text-2xl mb-4">
+                                    <span className="custom-borderline">
+                                        {work.title}
+                                    </span>
+                                </h3>
+                                <p className="mb-4">{work.description}</p>
+                                {work.award && <AwardText award={work.award} />}
+                                <hr className="my-4 border-gray-600" />
+                                <div className="card-dark-border bg-gray-900 p-4">
+                                    <h4 className="text-lg mb-4">
+                                        Technologies Used
+                                    </h4>
+                                    <hr className="mb-4 border-gray-600" />
+                                    <div className="flex flex-wrap gap-4">
+                                        {work.technologies.map((tech) => (
+                                            <div
+                                                key={tech.name}
+                                                className="text-center"
+                                            >
+                                                <TechIcon icon={tech.icon} />
+                                                <div className="text-sm mt-1">
+                                                    {tech.name}
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
-                                ))}
+                                </div>
+                                {work.link && (
+                                    <Link
+                                        href={work.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="btn-outline-accent inline-block mt-6"
+                                    >
+                                        View More
+                                    </Link>
+                                )}
                             </div>
+                            {!imageFirst && (
+                                <div className="relative h-64 lg:h-auto">
+                                    <Image
+                                        src={work.image}
+                                        alt={work.title}
+                                        fill
+                                        sizes="(min-width: 1024px) 50vw, 100vw"
+                                        className="object-cover"
+                                    />
+                                </div>
+                            )}
                         </div>
-                        <Link
-                            href={featuredWorks[1].link || "#"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-outline-accent inline-block mt-6"
-                        >
-                            View More
-                        </Link>
-                    </div>
-                </div>
+                    );
+                })}
             </div>
         </section>
     );
