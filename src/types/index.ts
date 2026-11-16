@@ -62,3 +62,11 @@ export interface SkillCategory {
     title: string;
     skills: Skill[];
 }
+
+// One entry on the About page timeline
+export interface TimelineEntry {
+    date: string; // <time datetime> の値（YYYY または YYYY-MM）
+    label: string; // 表示用の日付（例: "Apr 2023"）
+    title: string;
+    description?: string;
+}

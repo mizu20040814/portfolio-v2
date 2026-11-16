@@ -3,10 +3,11 @@ import AboutHeroSection from "@/components/about/AboutHeroSection";
 import SkillSection from "@/components/home/SkillSection";
 import HobbySection from "@/components/about/HobbySection";
 import WorkExperienceSection from "@/components/about/WorkExperienceSection";
+import TimelineSection from "@/components/about/TimelineSection";
 
 export const metadata: Metadata = {
     title: "About Me | Mizuki Tamura",
-    description: "About Mizuki Tamura - Skills, Hobby, and Work Experience",
+    description: "About Mizuki Tamura - Skills, Hobby, Work Experience, and Timeline",
     alternates: { canonical: "/about" },
     openGraph: {
         type: "website",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
         siteName: "PortFolio | Mizuki Tamura",
         title: "About Me | Mizuki Tamura",
         description:
-            "About Mizuki Tamura - Skills, Hobby, and Work Experience",
+            "About Mizuki Tamura - Skills, Hobby, Work Experience, and Timeline",
         images: [
             {
                 url: "/images/og-image.jpg",
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "About Me | Mizuki Tamura",
         description:
-            "About Mizuki Tamura - Skills, Hobby, and Work Experience",
+            "About Mizuki Tamura - Skills, Hobby, Work Experience, and Timeline",
         images: ["/images/og-image.jpg"],
     },
 };
@@ -41,6 +42,7 @@ export default function AboutPage() {
             <SkillSection />
             <HobbySection />
             <WorkExperienceSection />
+            <TimelineSection />
         </>
     );
 }
