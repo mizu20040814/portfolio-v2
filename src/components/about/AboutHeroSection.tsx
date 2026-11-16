@@ -1,3 +1,5 @@
+import ProfileSummary from "@/components/ui/ProfileSummary";
+import { profile } from "@/data/profile";
 
 export default function AboutHeroSection() {
     return (
@@ -18,25 +20,16 @@ export default function AboutHeroSection() {
                         <span
                             className="custom-borderline animate-border"
                         >
-                            Mizuki Tamura
+                            {profile.name}
                         </span>
                     </h2>
-                    <p className="pt-6">
-                        Doshisha University Faculty of Science and Engineering
-                        <br />
-                        Department of Intelligent Information Engineering and
-                        Sciences
-                        <br />
-                        20 years old, born in Nagasaki, now living in Kyoto
-                    </p>
+                    <ProfileSummary />
                     <hr className="my-6 border-gray-400" />
-                    <p>
-                        I am currently learning web application development,
-                        mainly using JavaScript and Firebase through personal
-                        projects. I am also familiar with HTML, CSS, Node.js,
-                        and Bootstrap. My experience working as a USJ crew
-                        member has helped me develop strong communication
-                        skills, which I consider one of my key strengths.
+                    <p>{profile.bio}</p>
+                    <p className="pt-4">
+                        Graduation research: {profile.research}
+                        <br />
+                        English: {profile.english}
                     </p>
                 </div>
             </div>

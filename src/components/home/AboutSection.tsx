@@ -1,4 +1,6 @@
 import Link from "next/link";
+import ProfileSummary from "@/components/ui/ProfileSummary";
+import { profile } from "@/data/profile";
 
 export default function AboutSection() {
     return (
@@ -20,26 +22,12 @@ export default function AboutSection() {
                         <span
                             className="custom-borderline"
                         >
-                            Mizuki Tamura
+                            {profile.name}
                         </span>
                     </h3>
-                    <p className="pt-6">
-                        Doshisha University Faculty of Science and Engineering
-                        <br />
-                        Department of Intelligent Information Engineering and
-                        Sciences
-                        <br />
-                        20 years old, born in Nagasaki, now living in Kyoto
-                    </p>
+                    <ProfileSummary />
                     <hr className="my-6 border-gray-600" />
-                    <p>
-                        I am currently learning web application development,
-                        mainly using JavaScript and Firebase through personal
-                        projects. I am also familiar with HTML, CSS, Node.js,
-                        and Bootstrap. My experience working as a USJ crew
-                        member has helped me develop strong communication
-                        skills, which I consider one of my key strengths.
-                    </p>
+                    <p>{profile.bio}</p>
                     <Link
                         href="/about"
                         className="btn-outline-accent inline-block mt-6"
