@@ -257,3 +257,83 @@ body {
 .text-accent {
     color: var(--accent);
 }
+
+/*
+ * Contact form（gray-900 の面に白い文字で書く）
+ * エラーは :user-invalid で、入力を終えた後にだけ出す（modern-web-guidance: forms / accessible-error-announcement）
+ */
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-block-start: 1.5rem;
+}
+
+.contact-form input:not([type="hidden"]),
+.contact-form textarea {
+    font: inherit;
+    font-size: max(1rem, 1em);
+    min-height: 48px;
+    padding: 0.75rem;
+    color: white;
+    background-color: #030712; /* gray-950: 面（gray-900）より少し暗くして欄を見分けやすくする */
+    border: 1px solid #9ca3af;
+    border-radius: 0;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:not([type="hidden"]):focus-visible,
+.contact-form textarea:focus-visible {
+    /* 赤い枠はエラーに使うので、フォーカスは白い外枠だけで示す */
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/* アクセント色は黒地で 3.57:1 なので、エラーの文字は明るい赤（黒地で約 8:1）にする */
+.contact-error,
+.contact-error-text {
+    color: #ff9ea3;
+}
+
+.contact-error {
+    display: none;
+    font-size: 0.875rem;
+}
+
+.contact-error::before {
+    content: "⚠ ";
+}
+
+.contact-form :is(input, textarea):user-invalid {
+    border-color: #ff9ea3;
+    border-width: 2px;
+}
+
+.contact-form :is(input, textarea):user-invalid ~ .contact-error {
+    display: block;
+}
+
+/* 見た目は隠し、読み上げには残す */
+.contact-sr-only {
+    position: absolute;
+    clip-path: inset(50%);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+}
+
+/* ハニーポット: 画面の外に出す（display:none だと埋めないボットがいるため） */
+.contact-honeypot {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
