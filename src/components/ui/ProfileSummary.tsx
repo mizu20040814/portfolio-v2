@@ -6,7 +6,7 @@ export default function ProfileSummary() {
         <p className="pt-6">
             {profile.university} {profile.faculty}
             <br />
-            {profile.department}
+            {profile.department} ({profile.grade})
             <br />
             {getAge(profile.birthDate)} years old, born in {profile.hometown},
             now living in {profile.currentCity}

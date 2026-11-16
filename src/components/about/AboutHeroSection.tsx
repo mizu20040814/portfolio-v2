@@ -26,6 +26,11 @@ export default function AboutHeroSection() {
                     <ProfileSummary />
                     <hr className="my-6 border-gray-400" />
                     <p>{profile.bio}</p>
+                    <p className="pt-4">
+                        Graduation research: {profile.research}
+                        <br />
+                        English: {profile.english}
+                    </p>
                 </div>
             </div>
         </section>

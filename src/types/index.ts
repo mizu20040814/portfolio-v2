@@ -17,6 +17,9 @@ export interface Profile {
     university: string;
     faculty: string;
     department: string;
+    grade: string; // 例: "4th year"
+    research: string;
+    english: string;
     birthDate: string; // YYYY-MM-DD
     hometown: string;
     currentCity: string;

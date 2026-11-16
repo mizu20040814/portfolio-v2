@@ -7,6 +7,10 @@ export const profile: Profile = {
     faculty: "Faculty of Science and Engineering",
     department:
         "Department of Intelligent Information Engineering and Sciences",
+    grade: "4th year",
+    research:
+        "Automatically discovering cross-disciplinary connections between conference presentations",
+    english: "TOEIC 800, official English-speaking crew at Universal Studios Japan",
     // 年齢はここから計算する（静的生成なので、ビルドした日の年齢になる）
     birthDate: "2004-08-14",
     hometown: "Nagasaki",
