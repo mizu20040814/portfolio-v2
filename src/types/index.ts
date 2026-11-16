@@ -25,6 +25,12 @@ export interface Profile {
     bio: string;
 }
 
+// One section of a work's case study (e.g. Background, Challenges, Results)
+export interface CaseStudySection {
+    heading: string;
+    paragraphs: string[];
+}
+
 // Work project type definition
 export interface Work {
     id: string;
@@ -35,6 +41,11 @@ export interface Work {
     link?: string;
     award?: Award;
     featured?: boolean; // Home の Works に載せる
+    // 作品詳細ページ（/works/[id]）用。書いたものだけ表示する
+    period?: string; // 例: "2025.06 – 2025.07"
+    team?: string; // 例: "Team of 4"
+    role?: string; // 例: "Frontend, Chrome extension logic"
+    caseStudy?: CaseStudySection[];
     thanks?: {
         label: string;
         url: string;

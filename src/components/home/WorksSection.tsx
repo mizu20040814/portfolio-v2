@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { works } from "@/data/works";
+import { workPath } from "@/data/works-helpers";
 import TechIcon from "@/components/ui/TechIcon";
 import AwardText from "@/components/ui/AwardText";
 
@@ -79,16 +80,13 @@ export default function WorksSection() {
                                         ))}
                                     </div>
                                 </div>
-                                {work.link && (
-                                    <Link
-                                        href={work.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="btn-outline-accent inline-block mt-6"
-                                    >
-                                        View More
-                                    </Link>
-                                )}
+                                <Link
+                                    href={workPath(work.id)}
+                                    className="btn-outline-accent inline-block mt-6"
+                                >
+                                    View More
+                                    <span className="sr-only"> about {work.title}</span>
+                                </Link>
                             </div>
                             {!imageFirst && (
                                 <div className="relative h-64 lg:h-auto">
