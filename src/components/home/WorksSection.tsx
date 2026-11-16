@@ -1,7 +1,8 @@
+import { ViewTransition } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { works } from "@/data/works";
-import { workPath } from "@/data/works-helpers";
+import { workImageTransitionName, workPath } from "@/data/works-helpers";
 import TechIcon from "@/components/ui/TechIcon";
 import AwardText from "@/components/ui/AwardText";
 
@@ -36,16 +37,18 @@ export default function WorksSection() {
                             className={`grid lg:grid-cols-2 gap-8${isLast ? "" : " mb-16"}`}
                         >
                             {imageFirst && (
-                                <div className="order-2 lg:order-1 relative h-64 lg:h-auto">
-                                    <Image
-                                        src={work.image}
-                                        alt={work.title}
-                                        fill
-                                        sizes="(min-width: 1024px) 50vw, 100vw"
-                                        className="object-cover"
-                                        style={{ objectPosition: work.imagePosition }}
-                                    />
-                                </div>
+                                <ViewTransition name={workImageTransitionName(work.id)}>
+                                    <div className="order-2 lg:order-1 relative h-64 lg:h-auto">
+                                        <Image
+                                            src={work.image}
+                                            alt={work.title}
+                                            fill
+                                            sizes="(min-width: 1024px) 50vw, 100vw"
+                                            className="object-cover"
+                                            style={{ objectPosition: work.imagePosition }}
+                                        />
+                                    </div>
+                                </ViewTransition>
                             )}
                             <div
                                 className={
@@ -90,16 +93,18 @@ export default function WorksSection() {
                                 </Link>
                             </div>
                             {!imageFirst && (
-                                <div className="relative h-64 lg:h-auto">
-                                    <Image
-                                        src={work.image}
-                                        alt={work.title}
-                                        fill
-                                        sizes="(min-width: 1024px) 50vw, 100vw"
-                                        className="object-cover"
-                                        style={{ objectPosition: work.imagePosition }}
-                                    />
-                                </div>
+                                <ViewTransition name={workImageTransitionName(work.id)}>
+                                    <div className="relative h-64 lg:h-auto">
+                                        <Image
+                                            src={work.image}
+                                            alt={work.title}
+                                            fill
+                                            sizes="(min-width: 1024px) 50vw, 100vw"
+                                            className="object-cover"
+                                            style={{ objectPosition: work.imagePosition }}
+                                        />
+                                    </div>
+                                </ViewTransition>
                             )}
                         </div>
                     );

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { ViewTransition } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { works } from "@/data/works";
-import { getWork, workPath } from "@/data/works-helpers";
+import { getWork, workImageTransitionName, workPath } from "@/data/works-helpers";
 import { profile } from "@/data/profile";
 import TechIcon from "@/components/ui/TechIcon";
 import AwardText from "@/components/ui/AwardText";
@@ -106,17 +107,20 @@ export default async function WorkDetailPage({ params }: Props) {
                     </dl>
                 )}
 
-                <div className="relative h-64 md:h-[28rem] mt-10">
-                    <Image
-                        src={work.image}
-                        alt={work.title}
-                        fill
-                        preload
-                        sizes="(min-width: 1536px) 1504px, (min-width: 1280px) 1248px, 100vw"
-                        className="object-cover"
-                                        style={{ objectPosition: work.imagePosition }}
-                    />
-                </div>
+                {/* 一覧の同じ作品の画像から、この画像へ形を変えながらつなげる */}
+                <ViewTransition name={workImageTransitionName(work.id)}>
+                    <div className="relative h-64 md:h-[28rem] mt-10">
+                        <Image
+                            src={work.image}
+                            alt={work.title}
+                            fill
+                            preload
+                            sizes="(min-width: 1536px) 1504px, (min-width: 1280px) 1248px, 100vw"
+                            className="object-cover"
+                            style={{ objectPosition: work.imagePosition }}
+                        />
+                    </div>
+                </ViewTransition>
 
                 {/* 本文（caseStudy）がまだない作品は、技術とリンクだけを左寄せで出す */}
                 <div
